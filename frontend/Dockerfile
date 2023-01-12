@@ -10,4 +10,8 @@ RUN npm install --silent
 
 COPY . ./
 
+RUN chown -R node /app/node_modules
+
+USER node
+
 CMD ["npm", "start"]

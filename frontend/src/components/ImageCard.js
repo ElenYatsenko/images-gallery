@@ -12,13 +12,13 @@ const ImageCard = ({ image, deleteImage, saveImage }) => {
           Delete
         </Button>{" "}
         {!image.saved && (
-          <Button
+          <button
             type="button"
             class="btn btn-outline-secondary"
             onClick={() => saveImage(image.id)}
           >
             Save
-          </Button>
+          </button>
         )}
       </Card.Body>
     </Card>

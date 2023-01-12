@@ -10,17 +10,21 @@ const ImageCard = ({ image, deleteImage, saveImage }) => {
       <Card.Body>
         <Card.Title>{image.title?.toUpperCase()}</Card.Title>
         <Card.Text>{image.description || image.alt_description}</Card.Text>
-        <Button variant="secondary" onClick={() => deleteImage(image.id)}>
-          Delete
-        </Button>{" "}
-        {!image.saved && (
-          <button
+        {image.saved ? (
+          <Button
+            variant="secondary"
+            onClick={() => deleteImage(image.id)}
+          >
+            Delete
+          </Button>
+        ) : (
+          <Button
             type="button"
-            class="btn btn-outline-secondary"
+            class="btn btn-outline-secondary "
             onClick={() => saveImage(image.id)}
           >
             Save
-          </button>
+          </Button>
         )}
       </Card.Body>
       <Card.Footer className="text-center text-muted">

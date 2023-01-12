@@ -35,8 +35,12 @@ const App = () => {
     e.preventDefault();
     try {
       const res = await axios.get(`${API_URL}/new-image?query=${word}`);
-      setImages([{ ...res.data, title: word }, ...images]);
-      toast.info(`New image ${word.toUpperCase()} was found!`);
+      if (!res.data.errors) {
+        setImages([{ ...res.data, title: word }, ...images]);
+        toast.info(`New image ${word.toUpperCase()} was found!`);
+      } else {
+        res.data.errors.map((error) => toast.error(error));
+      }
     } catch (error) {
       console.log(error);
       toast.error(error.message);

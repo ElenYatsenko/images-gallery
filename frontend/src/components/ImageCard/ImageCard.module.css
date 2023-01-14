@@ -1,0 +1,24 @@
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imageCard {
+  height: 300px;
+  object-fit: cover;
+}
+
+.footerCard {
+  text-align: center;
+}
+
+.buttonCard {
+  text-align: end;
+}

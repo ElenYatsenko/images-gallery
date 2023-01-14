@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Search from "./components/Search";
-import ImageCard from "./components/ImageCard";
+import ImageCard from "./components/ImageCard/ImageCard";
 import Welcome from "./components/Welcome";
 import Spinner from "./components/Spinner";
 
